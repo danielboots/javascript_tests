@@ -62,3 +62,40 @@ let longVariableName = "This variable has a long name with multiple words, so it
 // This will log your variable to the console:
 
 console.log(longVariableName);
+
+
+
+//
+/* 
+First "a" variable was set to 5
+but then we increased it 
+by one. Try changing the two plus
+signs into into minus signs and
+see what happens 
+*/
+
+let a = 5;
+a++;
+
+console.log(a);
+
+
+
+/*
+First we set variable b to
+8 and then we used unary 
+negation to set the value
+for variable c. 
+*/
+var b = 8;
+var c = -b;
+
+console.log(c);
+
+
+//challenge//
+
+// Use the console.log method below this comment to add 10 plus 10 
+// to log the output to the console.
+
+console.log (10+10);

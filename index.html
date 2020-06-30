@@ -777,6 +777,149 @@ right side is equal to 20.
 </pre>
 
 
+<h2> String slicing challenge--- Counting the strings</h2>
+
+<pre>
+
+let quote = 'Whatever the mind can conceive and believe, it can achieve.';
+
+// Use the slice() method here to assign words to the 
+// conceive, believe and achieve variables:
+
+let conceive = quote.slice(22,30)
+let believe = quote.slice(35,42)
+let achieve = quote.slice(51,58)
+
+
+// This will log the three variable you create to the console
+console.log(conceive, believe, achieve);
+</pre>
+
+<p>my slice test </p>
+
+
+<pre>
+let quote = 'Whatever the mind can conceive and believe, it can achieve.';
+
+// Use the slice() method here to assign words to the 
+// conceive, believe and achieve variables:
+
+let conceive = quote.slice(22,30)
+let believe = quote.slice(35,42)
+let achieve = quote.slice(51,58)
+let slicetest = quote.slice(1,2)
+
+
+// This will log the three variable you create to the console
+console.log(conceive, believe, achieve);
+console.log(slicetest);
+
+</pre>
+
+<p>returns</p> 
+<pre>
+Native Browser JavaScript
+   
+conceive believe achieve
+h
+
+</pre>
+
+<p>what i learned here is counting the slices... 0,1 would return W, 1,2 would return H </p>
+
+
+<h2> <strong>Bonus Challenge</strong></h2>
+<hr>
+
+<p>HOLY SHIT!!!</p> 
+<pre>
+// These variables will be sliced and concatinated
+// to form the emailAddress variable:
+let fullName = 'Andrew Martin';
+let domainName = 'gmail';
+let tld = 'com';
+
+// Define the emailAddress variable here.
+// Remember to use the slice() and toLowerCase() string methods:
+let emailAddress = `${fullName.slice(0,6) .toLowerCase()}.${fullName.slice(7,13).toLowerCase()}@${domainName}.${tld}`
+
+// This will log the emailAddress variable to the console
+console.log(emailAddress);
+</pre>
+
+<p>returns</p>
+
+<pre>
+andrew.martin@gmail.com
+</pre>
+
+<p>notes on this section:</p>
+
+<ul>
+<li>break down what you need</li>
+<li>follow the simple rules it might look complicated but reading the code from left to right it makes sense.</li>
+<li>follow the correct syntax, template literals `` string concatenation its all there to put together!</li>
+</ul>
+
+<h2>Arrays</h2>
+<hr>
+<p>Arrays are a data type in javascript you can think of arrays as a list of values,storing multiple values in the same variable. they are not specific to JavaScript</p>
+
+<p>What is an array? Well, you've already learned how to create individual variables, which can be strings, numbers or Boolean true/false values. An array is simply a list of values, which is stored in one variable.
+
+Arrays can be created using literal notation. You can simply declare a new variable and assign the data in the <strong>[] brackets.</strong> The data in brackets can be any data type you want: strings, numbers, booleans and even arrays themselves:</p>
+
+<h2>Example</h2>
+<pre>
+let myArray = [1, 2, "banana", "apple"];
+console.log(myArray);
+</pre>
+
+<p>returns</p> 
+<pre>
+[ 1, 2, 'banana', 'apple' ]
+</pre>
+
+<h2>Array constructor</h2>
+<p>Array can be created with the Array() constructor: <strong> <pre> new Array("item1", "item2", "item3"); </pre> </strong> </p>
+
+<img src="images/arraycons.png" alt="array constructor">
+<p>literal notation is the preferred way of creating arrays ^^ above.</p>
+
+
+
+<h2>array indices</h2>
+<p>is a position of an item in an array</p>
+<p>allowing us to acces data from a specific position</p>
+<p>we use it by using the indexing notation for example <strong>myArray[0]</strong> </p>
+
+<h2>array indexing</h2>
+<p>An array in the example below has four items. Each item in the array has a position. It is called an index, and it is a number. Items in arrays start at zero, which means that in our example, number 1 will be at position 0, number 2 at position 1, “banana” at 2 and “apple” at 3.</p>
+
+<pre>
+let myArray = [1, 2, "banana", "apple"];
+console.log(myArray);
+</pre>
+
+<p>returns</p>
+
+<pre>
+[ 1, 2, 'banana', 'apple' ]
+</pre>
+
+<h2>accessing items</h2>
+<p>If you want to access an item in the array, you can just add the index number after the brackets. The output will be an item that is positioned at the number given in brackets. For the sake of simplicity we will use the same example:</p>
+
+<img src="images/array1.png" alt="accessing array">
+
+<h2>accessing the index of arrays</h2>
+<p>this is accomplished by using the console.log(newArray.indexof(1)); see below</p>
+
+<img src="images/indexarray.png" alt="index array">
+
+
+
+
 
 
 
