@@ -79,7 +79,7 @@ console.log(quote);
 
 
 <h2> Types of Arithmetic</h2>
-
+<hr>
 <p> Notes: In programming we use arithmetic operators - simply put  (+ _ * ) are operators, they operate on values.</p>
 <p>for example</p>
 <ul>
@@ -94,6 +94,7 @@ console.log(quote);
 <img src="images/CoreArithmetic2.png" alt="corearithmetic">
 
 <h2>Modulus</h2>
+<hr>
 <p>the remainder operatur returns the remained left over this is used by the % sign</p>
 
 <p> example </p> 
@@ -101,28 +102,31 @@ console.log(quote);
 <li>10 % 3; will return 1 </li>
 </ul>
 
-<p> /* The result of this expression 
+<pre> /* The result of this expression 
 is not how many time 10 is divided by 3 but
 is the remainder left after the division.
 If the divisor (on the right) divides evenly into the dividend (on the left)
 the answer will always be 0
 */
-10 % 3;</p>
+10 % 3;</pre>
 
 <h2>Exponential</h2>
+<hr>
 <p> raising the left operand to the power right operand </p>
 
 <p> or to the Power of </p>
 
 <ul>
-<li> 3 ** 3; = 27  or (3x3x3)</li>
+<li> <pre> 3 ** 3; = 27  or (3x3x3)</pre></li>
 </ul>
 
 
 <h2> Unary operators - more arithmetic </h2>
+<hr>
 <p> Now let’s look at the remainder of JavaScript’s  standard arithmetic operators.</p>
 
 <h3> Mathematical definitions:</h3>
+<hr>
 <p> Unary - consisting of or involving a single component or element.
 Unary negation of 2 is the integer '-2' </p>
 
@@ -130,6 +134,7 @@ Unary negation of 2 is the integer '-2' </p>
 
 
 <h2> Example</h2>
+<hr>
 <p> See javascript for correct view.</p>
 
 <p> /* 
@@ -141,6 +146,8 @@ see what happens
 */
 
 <strong> javascript </strong>
+<pre>
+
 let a = 5;
 a++;
 
@@ -159,9 +166,10 @@ var c = -b;
 
 console.log(c); </p>
 
-
+</pre>
 
 <h2>PEDMAS</h2>
+<hr>
 
 <ol>
 <li>P - Parentheses first</li>
@@ -171,7 +179,7 @@ console.log(c); </p>
 
 </ol>
 
-<h2>Precedence</h2>
+<h2>how to remember - Please Excuse My Aunt Sally</h2>
 <p>the order of the rules counts</p>
 
 <ul>
@@ -182,8 +190,321 @@ console.log(c); </p>
 </ul>
 
 <h3>example</h3>
-<p>console.log((10 + 10) * 20)</p> 
+<pre>console.log((10 + 10) * 20)</pre> 
 <p>will output <strong>400</strong></p>
+
+
+
+<h2>Floats</h2>
+<hr>
+
+<p>Floating point numbers are numbers that are followed by decimal points. JavaScript also treats integers as floating point numbers; the only difference is that, if the number doesn’t have anything after the decimal it will just pretend that the decimal point isn’t there and display the value as a whole number.</p>
+<p> Example: 0.4 + 0.1; returns: 0.5</p>
+
+<p>issues with Floating point numbers </p>
+
+<h2>Special value numbers</h2>
+<p> JavaScript has some special "types" of numbers reserved for when you get your maths badly wrong!
+
+What if you decided to perform mathematical operations on some text? Everyone knows that you can't divide a "donkey" by 4 (please don't try it). If you try to perform maths on some text (we also call this text a "string"), then JavaScript will tell you that the result is "NaN", which stands for “not a number”. It is a computational mistake. You can’t divide a string by a number or perform any other mathematical operation on strings.
+
+What if you try to divide a number by zero? Computers don't like that! JavaScript will return a number type called Infinity. What if you divide negative numbers by zero? You will get -Infinity.</p>
+
+<h2>NaN - not ya NAN - it just means.... hey this isnt a number.</h2>
+<p>You cant divide strings (you can slice) but you cant perform maths on strings.</p>
+
+
+<h2>Example;</h2>
+
+<pre>/* You can't divide by zero */
+console.log(1 / 0);
+
+/* No, not even negative numbers should
+be divided by zero */
+console.log(-1 / 0);
+
+console.log("How can a string be divided by number?" / 2);</pre>
+
+
+<h2>This will Output to the console.</h2>
+<pre>
+Native Browser JavaScript
+   
+Infinity
+-Infinity
+NaN
+=> undefined
+   
+
+</pre>
+
+
+
+<h2>Super Large Numbers : big and small </h2>
+<hr>
+
+<p>Sometimes, we need to work with very large or very small numbers. Fortunately, JavaScript can help us here.</p>
+
+<p>What if we want to write a massive number like 10000000000 which has ten zeros, for example? Well, it is easy to make a mistake, to miss a zero or add one extra. JavaScript gives us more straightforward ways to write such large numbers by using the letter <strong>e</strong>  followed by the number of zeros we need. We can use the same notation for small numbers too. This is called exponentiation. The exponent is the number following the letter <strong>e</strong> <p>.
+
+<p> So, we could represent one billion (1 followed by 9 zeros) as: <strong>1e9</strong> . Conversely, a nanosecond, which is one billionth of a second, would be represented as 1e-9. Notice we use a minus sign before the exponent for small numbers.</p>
+
+<h2>Example</h2>
+
+<pre>
+/* 4 followed by ten zeros */
+console.log(4e10);
+
+/* 1 with six leading zeros */
+1e-6;
+
+</pre>
+
+<p>will return</p>
+
+<pre>Native Browser JavaScript
+   
+40000000000
+=> 0.000001
+   </pre>
+
+
+
+<h2>Challenge - return infinity from a float</h2>
+
+<pre>In the Number Types unit, you learned about how JavaScript works with numbers. You also learned about special number types, such as Infinity and NaN
+
+Your challenge is to:
+Change the arithmetic in the console.log so that it returns Infinity
+
+Requirements:
+Don't just add the word "Infinity", we want you to change the arithmetic so that the result is the special number type, Infinity.</pre>
+
+
+<h2>CODE</h2>
+
+<pre>// Change the math so that it returns Infinity
+console.log(1/0);</pre>
+
+<p> <strong>Explaination</strong> you cant divide 1/0 thus giving <strong>Infinity</strong> </p>
+
+
+<h2>Number methods - what is it what does it do , how do you use it </h2>
+<p>They are actions that can be performed on numbers</p>
+<p>They affect the original number in some way</p>
+
+<pre>How do you use it?
+
+Add '.', method name & argument in parenthesis after object:  
+
+
+<strong>object.nameOfTheMethod(argument); </strong> </pre>
+
+
+<p>Number methods might all sound confusing, but actually, it is really straightforward. Let’s just say that the methods are things that can do stuff. If you think about human and computer language, they are quite alike. You can think of numbers as nouns and methods as verbs. Verbs do stuff to nouns. Let’s say you have a sentence “Sun is shining”. In JavaScript, it would be <strong>sun.shining()</strong>  where sun is an object and shining is a method. Developers now can say that they called shining on the sun which means that they called the shining method on the sun object. They did something with the sun; they made it shine. So let’s look at some of the methods that are usually performed on numbers.</p>
+<p>parseInt() parses a string and returns an integer</p>
+<p>parseFloat() takes a string and returns a floating-point number</p>
+
+<h2>Example</h2>
+
+<pre>console.log(
+Number.parseInt("10"),
+Number.parseInt("3.14"),
+Number.parseInt("I am not an integer"));
+
+console.log(
+Number.parseFloat("10"),
+Number.parseFloat("3.14"),
+Number.parseFloat("I am not a float"));</pre>
+
+<p>returns</p>
+<pre>Native Browser JavaScript
+   
+10 3 NaN
+10 3.14 NaN
+=> undefined
+   </pre>
+
+
+<h2>expanded</h2>
+
+<pre>toString() converts a number to a string
+
+toFixed(2) converts a number to a string, but keeping only two decimals
+
+Back in the Floats unit, you may remember that we mentioned that we can encounter issues working with floating-point numbers. These issues are related to precision. So, if you add the numbers 0.1 and 0.2 in JavaScript, you don't get a nice, clean 0.3 as you'd expect. Instead, you get a result like: 0.30000000000000004. If you want to know why this happens, then please read the section at the bottom of this page. If you just want to know how to fix the precision issue, then set the number of decimal places using the toFixed() method, as demonstrated below.</pre>
+
+
+<h2>precision</h2>
+
+<pre>
+console.log(
+	2.34345345.toFixed(5), // 5 decimals
+	2.33333.toFixed(1), // 1 decimal
+	1.1.toFixed(10) // 10 decimals
+);
+
+var myNum = 85;
+myNum.toString(); // '85'</pre>
+
+<p>will return</p>
+
+
+<pre>
+Native Browser JavaScript
+   
+2.34345 2.3 1.1000000000
+=> '85'
+   
+</pre>
+
+
+<h2>isFinite (number)</h2>
+
+<p>isFinite(number) checks if the value in parenthesis is an actual number isInteger(number) checks if the value in parenthesis is an integer isNaN(number) checks if the value in parenthesis is NaN</p>
+
+<h2>Example</h2>
+
+<pre>
+/*
+COPY PASTE EACH LINE OF CODE BELOW TO THE ADJACENT NATIVE BROWSER JAVASCRIPT
+*/
+
+/* Returns true because it is a real number.*/ 
+Number.isFinite(123);
+/* Returns false because -Infinity is not an actual number */
+Number.isFinite(-Infinity);
+
+/* Returns true because result of 0/0 is NaN  */
+Number.isNaN(0 / 0);
+/* Returns true because result of "a" * 3 is NaN  */
+Number.isNaN("a" * 3);
+
+/* True because 1 is an integer */
+Number.isInteger(1);
+/* False because banana is not an integer */
+Number.isInteger("banana");
+</pre>
+
+
+
+<h2>More about javascript floating point precision</h2>
+
+<p>To fully understand the problem, we have to understand how computers store numbers internally. JavaScript uses a format called 64-bit binary floating-point. And this format cannot accurately represent numbers like 0.1 or 0.2 at all! So, JavaScript has to round these numbers to be able to store them. It's in this rounding process that the errors creep in.</p>
+
+
+<h2>But wait! That's stupid!</h2>
+<p>Well, it's not stupid. It's just different. For example, our numbering system can't represent certain numbers properly. If you divide 10 by 3, you get 3.33333333, but if you multiply 3.33333333 by 3, you don't get 10. Instead, you get 9.99999999. In other words, we get a rounding error. When we know about it, we can work around it, and it's the same with 64-bit binary floating-point numbers.</p>
+
+<h2>Why not use a different number format then?</h2>
+<p>This is a good question. The simplest answer is that this format gives the best performance. It does have some quirks, but it allows the computer to perform calculations faster and in a format that it understands. It's beyond the scope of this course to explain these formats, but feel free to read about the IEEE-754 standard if you want to dive deeper into it.</p>
+
+
+<h2>Math Object</h2>
+<hr>
+
+<p>what is it: helps with mathematical operations - we use it by calling methods on Math object</p>
+
+<h2>Math objects</h2>
+<p>Knowing methods, it will become easier to use the syntax for calling methods on Math object.</p>
+
+<ul>
+<li><strong>Math.floor</strong> rounds down the number. 2.1 will be 2 </li>
+<li> <strong>Math.ceil</strong> rounds up the number. 1.1 will be 2 </li>
+<li> <strong>Math.round</strong> rounds to the nearest integer. It means 1.4 will be 1, but 1.6 will be 2</li>
+<li> <strong>Math.trunc</strong> removes the decimal part of the number. 4.5 will be 4 </li>
+<li> <strong>Math.sqrt</strong> returns the square root of the number </li>
+<li> <strong>Math.cbrt</strong> returns the cube root of the number </li>
+</ul>
+
+<h2>Examples in action</h2>
+
+<pre>
+console.log(
+Math.floor(1.1), // rounds down the number
+Math.ceil(1.1), // rounds up the number
+Math.round(1.4), // rounds to the nearest integer
+Math.trunc(1.1), // removes the decimal part 
+Math.sqrt(81), // returns 9 because 9 * 9 is 81
+Math.cbrt(64) // returns 4 because 4 * 4 * 4 is 64
+)
+</pre>
+
+<p>will return</p>
+<pre>Native Browser JavaScript
+   
+1 2 1 1 9 4
+=> undefined
+   </pre>
+
+<p> more info: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math</p>
+
+
+
+<h2>Challenge: Number methods </h2>
+
+<pre>
+let myStringInt = '10';
+let myStringFloat = '1.275';
+
+// Fix this code so that it adds correctly
+let result = parseInt(myStringInt) + parseFloat(myStringFloat);
+
+// This will print your results to the console
+console.log(result);
+</pre>
+
+
+<h2><Strong>Strings</Strong></h2>
+<hr>
+
+<p>a string is txt/// Strings are fundamental in a developer’s life. Wherever there is a textual data, you are going to need to use strings; first name, last name, city, occupation etc. are all going to represented as strings.</p>
+<p>we active them by By enclosing a piece of text in quotations </p>
+
+
+<pre>
+/* Whatever we put in quotes become string
+These are all strings */
+
+let a = "I am string";
+let b = "3"; // If there were no quotes here, it would be a number
+let c = "false"; // If there were no quotes here, it would be a boolean
+let n = "Alan";
+n = b + c;
+console.log("My name is " + "Paul");
+console.log("My name is " + n);
+console.log('Hello World')
+
+</pre>
+
+<h2>Quotations</h2>
+
+<p> <strong>What is it</strong> The different types of quotations that can be used to denote strings in JavaScript</p>
+<p> <strong>What does it do?</strong> Denotes the beginning and end of a string</p>
+<p> <strong>How do you use it</strong> <pre>Strings can be enclosed in either single ('this is a string') or double quotes ("this is a string")</pre></p>
+
+<p>Use single or double strings as long as you are consistent.</p>
+
+<h2>Example</h2>
+<pre>
+let singleQuote = 'single quoted string';
+let doubleQuote = "double quoted string";
+
+console.log(singleQuote);
+console.log(doubleQuote);
+</pre>
+
+<p>Results return exactly the same.</p>
+
+
+
+
+
+
+
+
+
+
 
 
 
