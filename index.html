@@ -535,6 +535,246 @@ console.log(stringWithApostrophe);
 
 <img src="images/NewlineEscape.png" alt="string escaping">
 
+<p>When working with text, sometimes we may need to create a line-break, separate paragraphs or other pieces of text. We can do this using the newline character (\n). You may also see newlines being created using the carriage return character (\r). In many cases \n and \r are treated as the same by the interpreter, but they are intended to be different. We recommend that you only use \n to create a new line.</p>
+
+<pre>
+/* 
+Each word will be on a separate line
+*/
+
+console.log("What\na\nbeautiful\nday");
+</pre>
+
+<p>returns</p>
+
+<pre>
+Native Browser JavaScript
+   
+What
+a
+beautiful
+day
+=> undefined
+   
+
+</pre>
+
+<h2>Tab Escaping</h2>
+<hr>
+<p>also a special JavaScript character allowing up to add a tab in a string we simply add <strong>\t</strong> whenever a new tab is required.</p>
+
+<p>metimes we may need to use a tab, or indent, to denote a new paragraph or some piece of information. In this case, we would use \t</p>
+<img src="images/newtab.png" alt="tab example">
+
+
+<h2>template literals</h2>
+<p>are a way of formatting strings without the use of escape characters </p>
+<p>gives us a literal rep of a sstring, including and new lines or tabs</p>
+<p>we use it by putting anything we need in ` ` quotes Bottom left keyboard and everything will be escaped</p>
+
+<a href="https://www.youtube.com/watch?v=NgF9-pdTDGs" target="_blank"> <strong>Video Explaining template literals</strong></a>
+
+ 
+ <img src="images/templit.png" alt="template literals">
+
+ 
+<h2>String escaping challenge</h2>
+<hr>
+<p>In the first Strings lesson you learned about the basics of creating strings and how to handle strings with quotation marks in them. However, it could become annoying or tedious to always remember whether to use single or double quotes when they really were meant to be interchangeable when defining strings in JavaScript. </p>
+
+<h3>challenge</h3>
+<ol>
+<li>Define a variable, haiku, which will output the haiku below when logged to the console</li>
+</ol>
+
+<pre>
+// Define the haiku variable here:
+let haiku = `Power down your brain
+Motion will now take over
+Ride this inertia` 
+
+// This will log your haiku to the console:
+console.log(haiku);
+</pre>
+
+<p>by simply using the backtick i was able to just copy and paste the text required instead of using a \n or /t MUCH EASIER</p>
+
+
+<H2>Bonus Challenge, template literals and tab escaping</H2>
+
+<pre>
+// Define the fileTree variable here:
+let fileTree= ` `
+// This will log the fileTree variable to the console:
+console.log(fileTree);
+</pre>
+
+<h2>solution</h2>
+<pre>
+// Define the fileTree variable here:
+let fileTree= 'My computer\n\tC:\\\n\t\tDocuments\n\t\tHome\n\t\tPics\n\t\tProgram Files\n\tD:\\\n\t\tBackup'
+// This will log the fileTree variable to the console:
+console.log(fileTree);
+</pre>
+
+<p>easier using template literals.</p>
+
+<h2>String methods</h2>
+<p>are actions for strings which can change and manipulate strings</p>
+<p>Use name of the method on the string object. Add string methods after the string object –</p>
+<pre> <strong>string.nameOfTheMethod();</strong></pre>
+
+<p>Remember from our Number Methods lesson, that a method performs an action. Strings have methods too, and we're going to look at the common ones in this lesson.
+
+We can use the <strong>indexOf()</strong>  method to find the position of a character in the string. Like most programming languages, JavaScript uses zero indexing, which means that the index of characters starts at 0. As you can see from the following example:
+</p>
+<img src="images/indexing.png" alt="string methods">
+
+
+<h2>example</h2>
+<p>notes: remember we start at zero, and even spaces and punctuation are counted as numbers, be aware!</p>
+<img src="images/strings.png" alt="string methods">
+
+
+
+<h2>slice </h2>
+<p>think of a slice of bread, we can chose which part of the loaf we want, starting again at zero and ending where we want. this is returned by...</p>
+
+<img src="images/slice.png" alt="slice">
+<pre>
+let myString = "Creativity";
+              /*0123456789 */
+
+/* It excluded first character at the zeroth position
+and seventh character and everything after it*/
+myString.slice(1, 7);
+</pre>
+
+<h2>string methods part 2</h2>
+<p>changing the case of the string</p>
+<pre>
+let myString = "I am string";
+let lowercasedString = myString.toLowerCase();
+let uppercasedString = myString.toUpperCase();
+
+console.log(lowercasedString);
+console.log(uppercasedString);
+
+</pre>
+<p>and find out the string lengh</p>
+<pre>
+let myString = "I'm a very cool string";
+console.log(myString.length);
+</pre>
+
+<p>we can repeat strings </p>
+
+<pre>let myString = "Hello!";
+
+myString.repeat(3);</pre>
+
+<p>for even more string methods visit <a href="https://www.sitepoint.com/15-javascript-string-functions/"></a></p>
+
+
+<h2>string concatenation</h2>
+<p> joining character strings end to end, joining two or more strings </p>
+<p>we use this by using the + operator on the string the <strong>concat</strong> method or template literals  </p>
+
+<p>how to string concatenation using the + operator.</p>
+
+<pre>
+let firstString = "I am ";
+let secondString = "in love with Javascript!";
+/* Here we are joning firstString and secondString */
+let newString = firstString + secondString;
+
+</pre>
+
+<h2>method 2- concat method</h2>
+
+<pre>
+let str1 = "Hello ";
+let str2 = "there!";
+let str3 = " What a beautiful day to learn Javascript concatenation, right?";
+
+/* We added str2 and str3 to str1 by
+ using concat method. Try switching 
+ order of strings in concat method. 
+ For example, put str2 before concat
+ keyword and str1 before str3 in parentheses
+ and see what happens
+  */
+str1.concat(str2, str3);
+
+</pre>
+
+
+<h2>method 3 template literals</h2>
+<p>But there is an even better way with ES6. Remember template literals? Well, you can now join two strings by simply putting the name of the strings in the curly brackets preceded by the dollar sign:</p>
+
+<pre>`${firstString + secondString}`</pre>
+
+<h2>example of template literals</h2>
+<pre>
+let first = "First string";
+let second = " Second string";
+
+
+/* Notice we used
+quotes for template literal */
+console.log(`Concatenation is joining two strings:
+${first + second}.`);
+</pre>
+
+<p>returns</p>
+
+<pre>
+
+Native Browser JavaScript
+   
+Concatenation is joining two strings:
+First string Second string.
+
+</pre>
+
+<h2>String interpolation</h2>
+<p> is an insertion of values from another object into the current string, it inserts the value of another objects value into the current string</p>
+<p>we achieve this by using concatenation or template literals</p>
+
+<p>Back in the old days, when there were no template literals, you could not insert values of new strings into the new one without closing it first. If you wanted to insert something in the middle of the string, you needed to close its first and last part with quotes. And you had to use plus operators:</p>
+
+
+<h2>old way adding + operators</h2>
+
+<pre>let leftSide = 10;
+let rightSide = 20;
+
+
+/* We inserted values of two strings into a new string. 
+Notice the plus operators and how we had to split our main string
+into several chunks*/ 
+console.log("Left side is equal to " + leftSide + " and right side is equal to " + rightSide);
+</pre>
+
+<h2>Nowadays We Can Inject The Values Directly Into Template Literals Using The Same ${TextGoesHere} Syntax That We Used For Concatenation</h2>
+
+<pre>
+let leftSide = 10;
+let rightSide = 20;
+
+
+/* We inserted values of two strings into a new string */ 
+console.log(`Left side is equal to ${leftSide} and
+right side is equal to ${rightSide}.`);
+
+</pre>
+
+<p>returns</p>
+
+<pre>
+Left side is equal to 10 and
+right side is equal to 20.
+</pre>
 
 
 
