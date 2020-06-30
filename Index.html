@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-<head>
-	<meta charset="UTF-8">
+    
+<head> 
+	<meta charset="UTF-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Javascript Notes</title>
     <link rel="stylesheet" href="style.css">
@@ -93,11 +93,97 @@ console.log(quote);
 
 <img src="images/CoreArithmetic2.png" alt="corearithmetic">
 
+<h2>Modulus</h2>
+<p>the remainder operatur returns the remained left over this is used by the % sign</p>
+
+<p> example </p> 
+<ul>
+<li>10 % 3; will return 1 </li>
+</ul>
+
+<p> /* The result of this expression 
+is not how many time 10 is divided by 3 but
+is the remainder left after the division.
+If the divisor (on the right) divides evenly into the dividend (on the left)
+the answer will always be 0
+*/
+10 % 3;</p>
+
+<h2>Exponential</h2>
+<p> raising the left operand to the power right operand </p>
+
+<p> or to the Power of </p>
+
+<ul>
+<li> 3 ** 3; = 27  or (3x3x3)</li>
+</ul>
+
+
+<h2> Unary operators - more arithmetic </h2>
+<p> Now let’s look at the remainder of JavaScript’s  standard arithmetic operators.</p>
+
+<h3> Mathematical definitions:</h3>
+<p> Unary - consisting of or involving a single component or element.
+Unary negation of 2 is the integer '-2' </p>
+
+<img src="images/unary.png" alt="">
+
+
+<h2> Example</h2>
+<p> See javascript for correct view.</p>
+
+<p> /* 
+First "a" variable was set to 5
+but then we increased it 
+by one. Try changing the two plus
+signs into into minus signs and
+see what happens 
+*/
+
+<strong> javascript </strong>
+let a = 5;
+a++;
+
+console.log(a); 
 
 
 
+/*
+First we set variable b to
+8 and then we used unary 
+negation to set the value
+for variable c. 
+*/
+var b = 8;
+var c = -b;
+
+console.log(c); </p>
 
 
+
+<h2>PEDMAS</h2>
+
+<ol>
+<li>P - Parentheses first</li>
+<li>E - Exponents (ie Powers and Square Roots, etc.)</li>
+<li>MD  - Multiplication and Division (left-to-right)</li>
+<li>AS - Addition and Subtraction (left-to-right)</li>
+
+</ol>
+
+<h2>Precedence</h2>
+<p>the order of the rules counts</p>
+
+<ul>
+<li>do things in Parentheses first</li>
+<li>roots powers etc before multiply divide add or subtract</li>
+<li>multiply divide before add or subtract</li>
+<li>Otherwise go left to right</li>
+</ul>
+
+<h3>example</h3>
+<p>console.log((10 + 10) * 20)</p> 
+<p>will output <strong>400</strong></p>
 
 
 
