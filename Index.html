@@ -1,14 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Notes</title>
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript Notes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body> 
+ 
+<body>  
+
+		<h1>Welcome to Dans javascript notes</h1>
+        <p> This file i will use for my own personal notes regarding Javascript. Im using an external .js file to write the javascript. Remember to Comment out correctly. I can write notes here too. </p>
 
 
-    <script src="index.js"></script>
+<h2> What are Variables</h2>
+<hr>
+<p> Var: A variable is like a box of data, their values can change, or vary! 
+
+for example Dan is doing a programming course, he is looking at the computer, he is 34 years old.
+
+</p>
+
+
+<p> If we want to 'save' data and assign it to a var for example the number pi, we know its 3.142 etc instead of retypuing it out we can just say.... var  pi = 3.142, after that so far we just use the variable pi instead of the number, it can also change (hence the name VARIABLES.)</p>
+<p>A second example would be when your making a calcultator for work, hourly cost can be 20 or 25 or 30 £ per hour. If thats the case just assign hourly_cost =  </p>
+
+<p> Variables are a time saver we assign a value but it can change .</p>
+
+
+<h2>Examples of Naming Variables</h2>
+<hr>
+
+<img src="images/NamingVariables.png" alt="Naming variable">
+<p>As we said previously, variable names don’t matter to the computer, but they certainly matter to the developers. It is much more readable if you name your variable totalAmount, rather than X or just a. The developer that comes after you will then know the purpose of this variable. If you name it X, then future developers will have to first read your code and figure out what it does to see variable X in action. If you name it totalAmount, then they will probably guess what this code is going to do. The code will be much more human-readable, and human-friendly code is a quality of good coding. But certain rules need to be followed, that matter to the computer as well. So let’s see what they are about when it comes to JavaScript. Certain keywords are not supposed to be used when naming the variables. These keywords are shown in the image to the left. They should not be used because they are reserved keywords in JavaScript. They have special meaning and that meaning should never be changed:</p>
+
+<h2>camelCasing</h2>
+<hr>
+
+<p>Simply a way of naming..... first name of any var lower case any further words start with a capital</p>
+
+<ul>
+<li>camelCasingExample1</li>
+<li>camelCasingIsEasy</li>
+<li>camelCasingForYou</li>
+<li>IAMnotCamelCasing</li>
+</ul>
+
+<h2>JavaScript Rules when naming Variables</h2>
+<hr>
+<p>Certain rules should be followed when naming the variables:
+
+The first character can be a letter, underscore or a dollar sign, but subsequent characters can be letters, digits, dollar sign or underscores
+Numbers are not allowed as the first character
+There should not be any logical or mathematical operator anywhere in the name (/, *, -, +, &&, ||)
+There should not be any special symbols: !, @, *, ? etc.
+Spaces are not allowed: lower camelCase should be used instead. If you want to name your variable “current slide”, then it should be named currentSlide
+</p>
+
+
+<h2>Example of naming a variable </h2>
+<hr>
+// Define your variable here:
+var quote=("Keep your face always toward the sunshine and shadows will fall behind you.")
+
+// This will log your variable to the console:
+console.log(quote);
+
+
+<h2>JavaScript - arithmetic and numbers</h2>
+<hr>
+<p>JavaScript represents numbers as whole numeric characters –  47, referred to as an <strong>integer</strong> </p>
+<p>Or as a fractional form using decimals ex. 7.417 this is referred to as a <strong>floating point number or float.</strong> </p>
+
+
+<p>A number is one of the three core types of data used by JavaScript. But before we go on, let’s get some basic terminology in place.</p>
+<p>As with most programming languages, a  fundamental concept within JavaScript is an expression. <strong> An <em>expression </em> produces or results in some value.</strong> </p>
+
+
+<h2> Types of Arithmetic</h2>
+
+<p> Notes: In programming we use arithmetic operators - simply put  (+ _ * ) are operators, they operate on values.</p>
+<p>for example</p>
+<ul>
+<li>10 - 10 = 0</li>
+<p>  in this example the - sign is the operator and the operands are 10 and  0 the result is the <strong>EXPRESSION</strong> </p>
+<li>10 + 10 = 20</li>
+<li>10 * 10 = 100</li>
+</ul>
+
+<strong>EXPRESSIONS are formed from : Operand (Number etc)... operator (what your doing ie subtraction minusing etc) Operand (Number etc) </strong>
+
+<img src="images/CoreArithmetic2.png" alt="corearithmetic">
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="index.js"></script>
 </body>
+
 </html>
