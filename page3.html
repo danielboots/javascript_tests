@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1> Javascript page 3 - starting with concatenation arrays</h1>
+
+
+<h2>Making a single array out of two arrays</h2>
+
+<p>method: We use the concat() method</p>
+
+<p>We previously discussed the concatenation of strings. When it comes to arrays, concatenation is very similar. We can use the same method for arrays as well: concat(). This method does not change the original arrays. It creates the new one by joining two existing arrays:</p>
+
+<img src="images/concarray.png" alt="">
+
+<h2>required challenge.</h2>
+<p>Array Dimensions & Concatenation - Required - Concatenating Arrays:
+You may recall learning in the Array Dimensions and Concatenation lesson that we can merge two arrays together using the concat() method. The nice thing about the concat() method is that it leaves the original arrays intact, so you can continue to use them in their original form or manipulate them in other ways after creating their concatenation. 
+
+Concatenating arrays is just another array manipulation tactic that will no doubt come in handy in your coding journey.
+
+Your challenge is to:
+Create an array, firstHalf, containing the numbers 1 through 5 in ascending order.
+Create another array, secondHalf, containing the numbers 6 through 10 in ascending order
+Concatenate the two arrays into a new array, oneToTen, and ensure that the oneToTen array contains the numbers 1 through 10 in ascending order
+
+Requirements:
+You must use the concat() method correctly in order for the oneToTen array to have the numbers in the correct order</p>
+
+
+<h1>FUck me first time !!!POWWWWWW</h1>
+
+<pre>
+
+// Create your arrays here:
+let firstHalf = [1,2,3,4,5];
+let secondHalf = [6,7,8,9,10];
+
+
+let oneToTen = firstHalf.concat(secondHalf);
+
+// These lines will log your arrays to the console:
+console.log(firstHalf);
+console.log(secondHalf);
+
+</pre>
+
+
+<h2>multidimensional Arrays SUB ARRAYS - </h2>
+<p>same as a normal array but more levels of storage - think a box inside of a box</p>
+
+<pre>var myArray = [ [val1, val2, val3], [val4, val5, val6] ]; We can see that myArray has only two values, that is two subarrays. It means that myArray[0] will return first subarray: [val1, val2, val3], while myArray[1] will return second subarray [val4, val5, val6]. Each subarray has three values. If we want to select items in subarrays, then we need to add one more set of brackets with an index as shown in the example below:</pre>
+
+<img src="images/subarray.png" alt="">
+
+
+<h2>challenge - arrays </h2>
+<p>Array Dimensions & Concatenation - Required - Multidimensional Arrays:
+As you learned in the Array Dimensions & Concatenation lesson, and as you've already practiced if you've solved all the previous challenges, arrays can have other arrays as elements. It's useful to be able to navigate multi-dimensional arrays (arrays with arrays as elements) because many APIs and applications store data in this way and being able to navigate them ensures you'll be able to access the data you need. 
+
+In the code window we've defined a deliberately obnoxiously complex multi-dimensional array called multiDimensionalArray. It contains the numbers 1 through 15, but it has multiple dimensions.
+
+Your challenge is to:
+Use array indexing to access the number 15 in multiDimensionalArray and assign it to a variable, fifteen
+Now that you know the indexes that were required to access the number 15, create a one-dimensional array called indexArray which contains, in order, the array indices you used to access the number 15 in the fifteen variable.
+
+Requirements:
+All variables must be named correctly and have the correct values
+Your indexArray will be tested to ensure that we can use its values to access 15 in the multiDimensionalArray</p>
+
+<pre>
+Something important to understand about multidimensional arrays, is that a single index in one array, can hold another array as a value.
+So for example in this code below
+let myArray = ['A', 'B', [1, 2, 3], 'C']
+The value at the 3rd index of myArray is another array with the value of [1, 2, 3]
+To get the value of that whole smaller array out of myArray, you would use the 3rd index to get it. And as indexes start at 0, the 3rd value in myArray would be accessed using this:
+let myNewVar = myArray[2] 
+Then myNewVar would hold the value of [1, 2, 3] 
+As the 3rd value in myArray is also an array, then in order to get one single number out of the second array, you need a second index. You do this by using another [ ] value directly after the first. 
+If you wanted to get the number 2 out of this array:
+let myArray = ['A', 'B', [1, 2, 3], 'C'] 
+Then you need two indexes one after the other, the first for the position of the array (at the 3rd index) and then the index of the number 2 within that array, like this: 
+let myNumber = myArray[2][1] 
+Using this method, and adding more indexes your original multi dimensional array name, you can drill down into all of the arrays that are nested inside each other for this challenge.
+(If you are still lost, see image in the thread under this post)
+
+</pre>
+<h2>solution video</h2>
+<p>https://www.youtube.com/watch?v=eu0WZeR7Q-4</p>
+
+
+<pre>
+
+// Access the value 15 from this multiDimensional array!
+let multiDimensionalArray = [1, 2, 3, [4, 5, 6, [7, 8, 9, [10, 11, 12, [13, 14, [15]]]]]];
+
+// Define the variable 'fifteen' here
+
+let fifteen = multiDimensionalArray[3][3][3][3][2][0];
+// Define the variable 'indexArray' here:
+
+let indexArray =[3,3,3,3,2,0];
+
+// This will log your variables to the console
+console.log(fifteen);
+console.log(indexArray);
+</pre>
+
+<img src="images/multiarrayindex.png" alt="">
+
+
+<h2>bonus challenge and solution concatenation of arrays</h2>
+
+<pre>
+// Country data to be used in your array construction:
+// Fields are country name, population, area, population density
+let countryData = [
+    ["Afghanistan", 37209007, 652860, 57],
+    ["Albania", 2938428, 27400, 107],
+    ["Algeria", 42679018, 2381740, 18],
+    ["Andorra", 77072, 470, 164],
+    ["Angola", 31787566, 1246700, 25],
+    ["Antigua and Barbuda", 104084, 440, 237],
+    ["Argentina", 45101781, 2736690, 16],
+    ["Armenia", 2936706, 28470, 103],
+    ["Australia", 25088636, 7682300, 3],
+    ["Austria", 8766201, 82409, 106],
+    ["Azerbaijan", 10014575, 82658, 121],
+    ["Bahamas", 403095, 10010, 40],
+    ["Bahrain", 1637896, 760, 2155],
+    ["Bangladesh", 168065920, 130170, 1291],
+    ["Barbados", 287010, 430, 667],
+    ["Belarus", 9433874, 202910, 46],
+    ["Belgium", 11562784, 30280, 382],
+    ["Belize", 390231, 22810, 17],
+    ["Benin", 11801595, 112760, 105],
+    ["Bhutan", 826229, 38117, 22],
+    ["Bolivia", 11379861, 1083300, 11],
+    ["Bosnia and Herzegovina", 3501774, 51000, 69],
+    ["Botswana", 2374636, 566730, 4],
+    ["Brazil", 212392717, 8358140, 25],
+    ["Brunei", 439336, 5270, 83],
+    ["Bulgaria", 6988739, 108560, 64],
+    ["Burkina Faso", 20321560, 273600, 74],
+    ["Burundi", 11575964, 25680, 451],
+    ["Côte d'Ivoire", 25531083, 318000, 80],
+    ["Cabo Verde", 560349, 4030, 139],
+    ["Cambodia", 16482646, 176520, 93],
+    ["Cameroon", 25312993, 472710, 54],
+    ["Canada", 37279811, 9093510, 4],
+    ["Central African Republic", 4825711, 622980, 8],
+    ["Chad", 15814345, 1259200, 13],
+    ["Chile", 18336653, 743532, 25],
+    ["China", 1420062022, 9388211, 151],
+    ["Colombia", 49849818, 1109500, 45],
+    ["Comoros", 850910, 1861, 457],
+    ["Congo (Congo-Brazzaville)", 5542197, 341500, 16],
+    ["Costa Rica", 4999384, 51060, 98],
+    ["Croatia", 4140148, 55960, 74],
+    ["Cuba", 11492046, 106440, 108],
+    ["Cyprus", 1198427, 9240, 130],
+    ["Czech Republic", 10630589, 77240, 138],
+    ["Democratic Republic of the Congo", 86727573, 2267050, 38],
+    ["Denmark", 5775224, 42430, 136],
+    ["Djibouti", 985690, 23180, 43],
+    ["Dominica", 74679, 750, 100],
+    ["Dominican Republic", 10996774, 48320, 228]
+];
+
+// Define your arrays here:
+
+let countries=[countryData[0][0], countryData[13][0], countryData[33][0], countryData[44][0]];
+let populations=[countryData[0][1], countryData[13][1], countryData[33][1], countryData[44][1]];
+let areas=[countryData[0][2], countryData[13][2], countryData[33][2], countryData[44][2]];
+let densities=[countryData[0][3], countryData[13][3], countryData[33][3], countryData[44][3]];
+
+let flattened =countries.concat(populations,areas,densities);
+
+// The following lines will log your variables to the console:
+console.log(countries);
+console.log(populations);
+console.log(areas);
+console.log(densities);
+console.log(flattened);
+</pre>
+
+
+<h2>Comparators - compare two values and return the boolean / true / false </h2>
+<p>How do you use it?
+
+Put one value on the left side, the other on the right side and add a comparator between them</p>
+
+<img src="images/Comparators.png" alt="">
+
+</body>
+</html>
