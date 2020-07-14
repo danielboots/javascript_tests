@@ -591,7 +591,7 @@ We could have written the same code with if else statements:</p>
 
 <a href="https://www.w3schools.com/js/js_switch.asp">W3 Schools switch</a>
 
-<img src="switch.png" alt="">
+<img src="images/switch.png" alt="">
 
 <p>There are lots of new keywords in the example but worry not. We will explain each one step by step. You will notice in the above replit that we first declared variable fruit and assigned a string “banana” to it. Now we want to check whether some other strings are “banana”. In this case we have many such strings, so we are going to need a switch statement.
 
@@ -601,7 +601,7 @@ Now we get the case keyword. Each case is compared to the expression until the c
 
 <h2>note: we must use the break; if not the interpreter will keep going! <strong>remember this</strong></h2>
 
-<img src="break.png" alt="break">
+<img src="images/break.png" alt="break">
 <p> In the replit below we have the same code but with the break keyword removed from the last case. See what happens. The code from a default statement showed up, right? The break keyword indicates the end of the particular case. If it weren’t there, the interpreter would not stop. It would move onto the next statement.</p>
 
 
@@ -626,6 +626,313 @@ You must use the ternary operator</p>
 var someVariable = testCondition ? valueIfTrue : valueIfFalse;
 </pre>
 
+<h2>result</h2>
+<p>// These variables will be used to test that your
+// shorthand if statement is working
+let a = 10;
+let b = 20;
+
+// Create the result variable here using the ternary operator:
+let result = a < b ? 'a is smaller' : 'a is not smaller' 
+
+// This line will log your result to the console:
+console.log(result);</p>
+
+
+<h2>bonus: switch operator.</h2>
+<p>In the Operators lesson you learned about another type of logical statement you can use to determine which code gets executed: the switch statement. This is sort of like an if statement, but it acts as a "switch" between many different values. You provide the switch with a value, and it will execute whatever code matches that case, or a default case if there is no match. 
+
+In the code window we've defined a function called whatsForBreakfast(). It takes a day as an argument, and should return a string that represents breakfast. Your job is to write the switch statement inside the function so that it returns the breakfast for each day of the week, as defined in this list:</p>
+
+<ul>
+<li>Monday: 'Ham and eggs'</li>
+<li>Tuesday: 'Sausage biscuit'</li>
+<li>Wednesday: 'Bacon and pancakes'</li>
+<li>Thursday: 'Cereal with milk'
+</li>
+<li>Friday: 'Bagel and jam'</li>
+<li>Saturday: 'Bacon, bacon and more bacon'</li>
+<li>Saturday: 'Bacon, bacon and more bacon'</li>
+<li>default: 'Waffles and OJ'</li>
+
+</ul>
+
+
+<p>The day will be passed into the function by the tests.</p>
+
+<h2>challenege</h2>
+
+<p>Write a switch statement inside the whatsForBreakfast() function which uses day as the argument to compare against the cases
+Use the return statement to return a breakfast for each case, rather than console logging it (see the example below)
+
+Requirements:
+The breakfast returned from your switch must match the list above exactly, including capitalization and punctuation
+The day passed into the function will be passed in exactly as shown above (capitalization included)
+
+Note: Since you've not learned about functions yet, here's a simple example of how to use a function and a switch to return something instead of logging it or setting a variable:</p>
+
+<pre>function returnFood(foodName) {
+    switch (foodName) {
+        case 'bacon':
+            return 'The food is ' + foodName
+        case 'eggs':
+            return 'These are healthier! ' + foodName
+        default:
+            return 'You didn\'t provide a food'
+    }
+}
+
+console.log(returnFood('bacon'))
+> The food is bacon
+</pre>
+
+<h2>solution</h2>
+
+<img src="images/waffles.png" alt="">
+
+<p>this solution lay in the principle of if and else statements , think of the days of the week as if statements, it runs that code and the default is the else statement! so its no a case (or an if) its selecting from that then the default is 
+the else statement, all else use default</p>
+
+
+<h2>type conversion</h2>
+<p>its a conversion from one type of data to another 
+you can convert arrays into strings and numbers into strings etc</p>
+
+<p>You may remember the typeof operator. It tells you the data type of the object. Imagine that you are working with some objects in JavaScript and at some point, you want to be sure whether your object is a string, array or something else. All this coding is confusing, and you just want to be sure if something that looks like a number is a number.</p>
+
+<pre>let numberOrString = "12";
+typeof(numberOrString);
+/* now we are 100% sure it is a string */</pre>
+
+<p>returns</p>
+
+<pre>Native Browser JavaScript
+   
+=> 'string'
+   </pre>
+
+<h2>arrays to strings</h2>
+<p>converts arrays to strings</p>
+<p>we use the </p>
+<pre>
+Using the toString() method
+
+</pre>
+
+<p>Sometimes you’re going to need to convert an array to a string. There are two ways of achieving this. We can call toString() method on the array you want to convert to a string. That method returns a new string without altering the original array</p>
+
+<h3>see screenshot for examples</h3>
+
+
+<img src="images/arraystring.png" alt="">
+
+<p>We can convert the same array to a string with join method. That method takes separator as an argument. It is a character that will separate items in the newly created string. It can be a comma, dot or even a word or a number.
+
+ Using Join</p>
+
+
+
+<h2>using <strong>Join</strong></h2>
+
+<img src="images/join.png" alt="">
+
+<h2>strings to arrays challenges</h2>
+
+<p>Once you know that there are different data types, it begs the question, " How can I convert one data type to another?" There are various methods for converting data types, one of which is toString() and another of which is join(). You learned about these in the Type Conversion lessons and they're usually used to convert arrays to strings.
+
+In the code window we've created a variable, daysOfTheWeek, which is an array containing the seven days of the week.
+
+Your challenge is to:
+Define a variable, weekString, which is the string representation of daysOfTheWeek
+Define another variable, weekWithSpaces, which joins daysOfTheWeek with a space as the separator
+</p>
+
+
+<h2>solution</h2>
+<img src="images/stringjoin.png" alt="">
+
+<h2>strings to arrays</h2>
+<p>is a type of conversion converting strings to arrays, we accomplish this by using the <pre>split()</pre> method</p>
+
+<p>If you want to convert a string to an array, you should start with the split() method. The split method takes separator and limit as arguments. The separator sets the character to use to separate the string. It sets the place where the split will happen. Limit sets the limit for how many times should split be repeated:</p>
+
+
+<h3>examples</h3>
+
+<img src="images/splitarray.png" alt="">
+
+<p>With ES6 we can convert a string into an array with from() method called on the array object. You can read it as “create an array from a string”:</p>
+
+<img src="images/arrayfromstring.png" alt="">
+
+<h2>splits challenge - Type Conversion - Required - Strings to Arrays:</h2>
+<p>Just like you can convert an array to a string, you can - somewhat more usefully - convert a string to an array. It's a somewhat common operation to split a string of text into an array of items so you can operate on those items. Common use cases might be parsing HTML to read HTML table data, reading and analyzing CSV files, or handling a plaintext response from an API. 
+
+In the code window we've defined a couple of variables, columnHeaders, which contains the column headers from a CSV file used for determining buy/sell/hold ratings on stocks, and apple, which contains the values for each column for Apple's stock.
+
+Your challenge is to:
+Split columnHeaders at the commas into an array and store it in a variable, splitColumns
+Split apple at the commas into an array and store it in a variable, splitApple
+
+Requirements:
+The splitColumns and splitApple variables must be arrays and have the correct values in them
+The original variables must not be modified</p>
+
+<h2>solution</h2>
+
+<img src="images/splitcomma.png" alt="">
+
+<pre> let splitColumns = columnHeaders.split(",")</pre>
+<p>Eazyyyy! = follow the logic of it all</p>
+
+<h2>numbers to strings</h2>
+<p>is a type of conversion alloing us to convert a number in to a string we use the <strong>toString()</strong> method.</p>
+
+<p>Converting numbers to strings is straightforward with the toString() method on a number with an argument in parenthesis that specifies the numeral system. When we say number, of course, we do not just mean the decimal (base-10) number system. It equally applies to other standard number systems such as base-16 (hexadecimal), base-8 (octal), and base-2 (binary).</p>
+
+<h2>example</h2>
+
+<img src="images/using2string.png" alt="">
+
+<p>notes: we have different number systems - normal binary etc look them up - they are used for differnt things! </p>
+
+<h2>challenge type conversion</h2>
+<p>Type Conversion - Required - Numbers to Strings:
+Converting arrays to strings and vice versa, and so can converting numbers to strings and vice versa. The latter can be useful for things like adjusting color brightness programmatically and converting between different numbering systems like binary, octal and hexadecimal.
+
+In the code window we've defined a variable, white, which is the decimal representation of the hexadecimal HTML color code for white.
+
+Your challenge is to:
+Convert the decimal number to hexadecimal and store it in a variable, whiteHex
+
+Requirements:
+You must include the hashtag in the whiteHex variable and it must be a string</p>
+
+<img src="images/whitehex.png" alt="">
+
+
+<h2>strings to numbers</h2>
+<p>converts a string to a number, there are a few ways to do this by using <pre>– parseInt(), parseFloat() and Number()</pre></p>
+
+<p>You can also take a numeric string and convert it back to numbers. Let’s take a look at them:
+
+</p>
+
+
+<h2>string to numbers</h2>
+
+<img src="images/stringnum.png" alt="">
+
+<h2>challenge: Type Conversion - Required - Strings to Numbers:</h2>
+
+<p>Like you can convert numbers to strings, you can also convert strings to numbers. This is particularly useful for adjusting color brightness. Let's look at an example:
+
+In the code window we've defined a variable, whiteHex, which represents the hexadecimal value of the color white (you might remember this from the HTML or CSS modules). If we wanted to adjust the brightness ever so slightly, wouldn't it make sense to just convert the hexadecimal number to decimal, subtract 1, and then convert it back?
+
+Your challenge is to:
+Convert the whiteHex variable to a decimal using the parseInt() function, and store it in a variable, whiteDecimal
+Subtract 1 from whiteDecimal and store it in a variable offWhiteDecimal
+Convert offWhiteDecimal back to hex and store it in a variable, offWhiteHex
+
+Requirements:
+All variables must have the proper values and data types
+
+Hint: Don't forget that the parseInt() function can take two arguments. Don't forget which base you're working with
+</p>
+
+<h2>solution</h2>
+<p>this one was a tough one, you have to think in steps, first we take the HEX value which is a string - string needs to be converted to a number so we parseInt(hex,16) so now we have the hex decimal string as a number by using (16) we can then use that to parseInt(hex -1) this minuses one from the number=
+so we have an off white, to convert back we take the new  let variable and <strong>.toString(16)</strong> it back to function</p>
+
+<h3>solution image</h3>
+
+<img src="images/hexconvert.png" alt="">
+
+
+<h2>boolean conversion -</h2>
+<p>is a type of conversion to convert boolean to other data types, wedo this depending on the type we wish to convert the boolean to
+either <strong>-toString() or Number()</strong></p>
+
+<p>It depends on what do you want to convert a boolean too. We can use toString() method again to convert boolean to a string. If you're going to convert a boolean value to a number, then use Number() function.</p>
+
+
+<pre>let string = true.toString(); // 'true'
+let number1 = Number(true); // 1 
+let number2 = Number(false); // 0
+
+console.log(string, number1, number2);
+console.log(typeof(string)); // typeof string is a string</pre>
+
+
+<h3>returns</h3>
+
+<pre>true 1 0
+string
+   </pre>
+
+<p>what we need to remember that true and false conversions - ie boolean 1 is equal to - 1 and false = 0</p>
+
+<p>Unary and binary operators convert boolean to a number. Therfore we can perform arithmetic operations with boolean values. These operators convert true to a number 1, while false to a number 0. Check this out!</p>
+
+
+<img src="images/booleanconvert.png" alt="">
+
+<h2>implicit type conversion</h2>
+<p>is an assumed type conversion - converting object types based on "common Sense" assumptions</p>
+<p>JavaScript implicitly converts objects to be compatible to an operation/p>
+<p>Can you add a string to a number or a boolean to a string? Let’s take a look at an example:</p>
+
+
+<h2>implicit type conversion examples</h2>
+
+
+<img src="images/implicit.png" alt="">
+
+<p>Let’s start with the first line in the above example: adding a string to a boolean value true. What happened? Javascript converted the boolean value to a string and concatenated it with string “true”. Boolean value true was implicitly converted to a string. JS assumed it should convert it to a string.
+
+Next example on the second line: adding number two to a string “banana”. JS converted an integer to a string and added it to a first string “banana”.
+
+On the third line we used the operator for multiplying. But we multiplied integer 2 with a boolean value. Maybe you would expect the result to be truetrue. But JS converted true to 1 and multiplied it by 2.
+
+On the fifth line, we added number 5 to a string “2”. Maybe you would expect a string to be converted to an integer. But no, JS converted the integer to a string. The expression was treated as if it was written: “2” + “5”. And that is why the result is “25”
+
+On the last line we showed you that strings cannot be multiplied by a number. The result is NaN (not a number).</p>
+
+<h2>general type conversions</h2>
+
+<p>Type Conversion - Required - General Type Conversion:
+</p>
+<p>Type Conversion - Required - General Type Conversion:
+In the Type Conversion lesson you learned that you can determine the type of any object by using the typeof operator. This can be very useful during debugging when you need to know if something is actually the type you expect it to be.
+
+In the code window we've defined several variables of different types.
+
+Your challenge is to:
+Log each of the variable types to the console using console.log() and the typeof operator
+</p>
+
+<img src="images/typeof.png" alt="">
+
+<h2>bonus challenge - General type conversion:</h2>
+
+<p>Type Conversion - Bonus - General Type Conversion:
+Now that you know a good amount about type conversion, conditional execution (if statements), arrays and strings, let's try to make something that's actually useful! If you've completed the other type conversion challenges up to this point, you should already have a start on this one, so if you haven't done that, you should go back and try to complete them before attempting this one.
+
+In the code window we've created a function called increaseBrightness(), which takes two arguments, hexCode and increaseAmount. The idea is to call the function, giving it a string hexadecimal code (such as 'aaaaaa') and brighten the color by adding the increaseAmount (an integer) to its decimal representation. If you're not sure how functions in JavaScript work yet, give it a quick Google. We'll cover them in more detail soon, but for now just remember to put any code you want to execute inside the curly brackets of the function, and to return something as the last line of your code.
+
+Your challenge is to:
+Inside the increaseBrightness() function, define a variable, hexCodeInDecimal, and assign it a value of hexCode converted to decimal
+Next, inside the increaseBrightness() function define a variable, brightened, and assign it a value of the hexCodeInDecimal variable plus the increaseAmount
+Finally, inside the increaseBrightness() function, define a variable, brightenedHex, and assign it a value of your brightened variable converted back to hex
+Use the return keyword to return brightenedHex from the function</p>
+
+
+
+
+<h2>create a function to adjust colour ACED!!! </h2>
+<h2>solution</h2>
+
+<img src="images/functioncolor.png" alt="">
 
 
 
