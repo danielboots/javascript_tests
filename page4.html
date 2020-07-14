@@ -70,7 +70,13 @@ In the each iteration i is incremented by one which means it is going to be 0,1,
 sports[0]
 Instead of 0, we have incrementer which is going to be 0,1,2,3. That means code block in the {} brackets is going to be sports[0], sports[1], sports[2] and sports[3].</p>
 
+<pre>
+let sports = ["basketball", "football", "tennis", "chess"];
 
+for (let i = 0; i < sports.length; i++) {
+	console.log(sports[i]);
+}
+</pre>
 
 
 
@@ -93,6 +99,83 @@ The output must match exactly and every username must be included.
 Note: Though this is not a requirement, don't forget you can use template literals if you want your code to be modern and elegant!
 
 If you're stuck, the Loops and Iteration lesson - specifically the For Loops and For Loops and Arrays units - will give you everything you need to succeed. Be sure to submit and compare your answer with the model solution (only available to view after you click submit).</p>
+
+<!-- Stuck on this challenge waiting on support-->
+
+<p>this worked using the for - in version of the loop... </p>
+<img src="images/forworking.png" alt="">
+
+<h2>for in loops</h2>
+<p>an easier way to iterate through arrays</p>
+<p> we can use a for -in loop to easily get the index integer for elements in the array</p>
+
+<p>Just like in our previous lesson, we're going to create an array to iterate through. Run the code below and then keep reading below the code for an explanation of what is going on here:
+
+</p>
+
+<h2>for - let loops</h2>
+
+<img src="images/forlet.png" alt="">
+
+<p>We created an array on the first line and used a different kind of for loop. This is a much simpler way of iterating through an array. This is called a for-in loop because it uses the keywords for and in inside the parentheses.
+
+As before, the variable i contains the index integer of the current element in the array. That means that the code block in the {} brackets is going to be:</p>
+
+
+<pre>sports[0] in the first iteration
+sports[1] in the second iteration
+sports[2] in the third iteration
+sports[3] in the fourth iteration</pre>
+
+<p>
+This time, though, we don't need to worry about supplying the condition (which, last time was: i < sports.length) or the incrementer (which was: i++ in the previous lesson).
+
+for (let i in sports) is easier to remember, and is good if we want to be able to retrieve and work with the index number of each element in an array. As we've seen, we can get the value of each individual element in the sports array using the code sports[i]. But there is an even easier way, which we'll look at in our next lesson.
+
+
+</p>
+
+<h2>while loops</h2>
+<p>is a type of loop which runs the same code until a condition is met</p>
+<p>we use the keyword while and set teh condition in the (). add code to be executed in the curly brackets {}</p>
+<img src="images/whileloop.png" alt="">
+
+<p>see above for example. for loop is for as long as a condition is met. the while encorporates both, while the condition is true run this code, when its false run this code.</p>
+<p>A while loop allows us to run code while the condition in the parentheses is true. If it is not true, stop the iteration. Let’s show our happiness again, but this time with the while loop:</p>
+
+<p>working example</p>
+
+<img src="images/work1.png" alt="">
+<img src="images/work2.png" alt="">
+
+<h2>while loop challenge</h2>
+
+
+<h2>solution
+</h2>
+<img src="images/whilesol.png" alt="">
+
+<h2>do while loops</h2>
+<p>is a type of loop which runs the same code until a condition is met it has two 
+keywords - <strong>do and while</strong></p>
+
+<pre>This loop has two keywords: do and while. do { block code } while (condition);</pre>
+
+<p>The do while loop will run the block of code at least once even though the condition is false. It means that the block of code runs before the condition is checked. The condition comes after the block of code. This loop is used if you want to run the block of code at least once no matter what. The do while loop will stop iteration when the condition is false. I am sure you want to tell everyone again how happy you are. Ten times! So let's do that again, but with a do while loop:</p>
+
+<img src="images/dowhile.png" alt="">
+
+<img src="dowhile2.png" alt="">
+
+
+
+
+
+
+
+
+
+
 
 
 
