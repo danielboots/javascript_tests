@@ -265,14 +265,67 @@ for (i=0; i < 60; i++) {
 an even number so we then continue with the iteration, this will then check the next number, if we get any other number other than 0 we know its an odd, thich then activates the console.log(i)</p>
 
 
+<h2>Nested loops -part one</h2>
+
+<p> a nested loop is a loop within a loop- it runs an iteration within another iteration.</p>
+
+<h3>for example</h3>
+<img src="images/nestedloop1.png" alt="">
+
+<p>We learned how to iterate through an array. We just need to create a loop with a code we want to execute. This time, we are going to use a for loop. So let’s create it and iterate over the first dimension of our array:
+</p>
+<img src="images/examplenest.png" alt="">
+
+<p>So, how does this work? After the array, we initialised variable i. Then we used the for keyword to create a for loop. In the parenthesis, we set the i variable to 0. Therefore counting will start at zero. The next statement is conditional:
+i < arr.length;
+This means iterate as long as a variable i is less than the length of an arr, in our case the length of the arr is 4. Therefore the loop will run until the variable i is no longer less than 4. In the next statement comes incrementor:
+i++;
+This looks familiar! Incrementor simply increments the value of the variable i by 1. On the fifth line in our example, we access items in arr by their index. The result of the arr[0] is going to be the first nested array: [1,2]. The next one is arr[1], and the result is going to be [3,4] and so on. arr[i] is how we access items in arr. This i in arr[i] is incremented by 1 in each iteration: arr[0], arr[1], arr[2], arr[3].</p>
+
+<h2>nested loops part 2 </h2>
+<p>We need another loop to access items in the subarray, a loop that will iterate through arrays that are nested in the first array:
+array[index][index];
+For that, we need another incrementor and another loop; the nested loop. We called it j and set it to zero. We need to make sure that this nested loop stops when there are no other items in the subarray, meaning when the incrementor, this time called j, is less than the length of each subarray. All of our subarrays have only two items which mean that j will need to be less than 2. When it goes to 2, the nested loop will stop. The incrementor, j variable, in this case, will be either 0 or 1.</p>
+
+<img src="images/nestedloop2.png" alt="">
+
+<p>explanation: we set variable i to access the outer array and j to access arrays inside of the  i var loop</p>
+<p>in the example we can see this at work. i lessthan array lengh add one, then check the array for j loop (second condition as you may have noticed we havent console.log()step one, as first condition is met it moves to the nested loop portion, this is not saying when j> arr lengh [i increment by one] and log it!</p>
+
+<p>In this instance, we are going to get each item in the subarray that is positioned at index 0 and 1. If you remember, we can access items in the subarray as follows:</p>
+<pre>
+arr[0][0] is going to be 1
+arr[0][1] is going to be 2
+arr[1][0] is going to be 3
+arr[1][1] is going to be 4
+arr[2][0] is going to be 5
+arr[2][1] is going to be 6
+arr[3][0] is going to be 7
+arr[3][1] is going to be 8</pre>
+
+
+<h2>nested loop challenge</h2>
+<img src="images/loopnest.png" alt="">
 
 
 
+<!-- Come back for solution-->
 
 
+<h2>infinite loops</h2>
+<p>a loop that never ends becasue a condition is never met</p>
+<p>nfinite loops usually happen by mistake due to some bug in your code. It will run the block code an infinite number of times and probably crash your browser or app. Let’s have a look at</p>
 
+<pre>
+let i = 0;
 
+for (i; i < 1; i--) {
+	console.log(i);
+}
 
+</pre>
+
+<p>in this we state that i is equal to 0, but our second condition is let code run if </p>
 
 
 </body>
