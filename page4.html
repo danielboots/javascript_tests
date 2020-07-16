@@ -167,7 +167,102 @@ keywords - <strong>do and while</strong></p>
 
 <img src="dowhile2.png" alt="">
 
+<p>We set the variable i to 0 first; then the code block runs “I am happy”. Then in the same code block, i was incremented by 1. Only after that, the condition will be checked (i < 10). So it doesn’t check if 0 is less than 10. Variable i was incremented by one before the condition. The first time iteration came to the condition; i was already 1. When i became 9, code block was executed (“I am happy”), i was incremented by 1, it became 10, ten is not less than 10, the condition was false, and the loop stopped. But notice that if we set the variable i at the beginning of the iteration to any number higher than 10,
 
+
+<p>in this example the code will run once, it runs fitst then checks the condition, if we set it to while i =4 or 5 or 6 it will still run once!  </p>
+
+<img src="images/whileonce.png" alt="">
+
+
+<h2>loops and iteration do while loop - solution </h2>
+<p>to print out or console log the last username we use the usernames.length property we also add -1 to give us the ability to run the loop</p>
+
+<p>solution</p>
+<img src="images/whileloopsol.png" alt="">
+
+
+<h2>bonus challenge - general loops and iteration.</h2>
+
+<img src="images/bonusiteration.png" alt="">
+
+<pre>Sure. So, if you have an array:
+let arr = ['a', 'b', 'c']; 
+You can access the elements by saying:
+console.log(arr[0]); // logs 'a'
+console.log(arr[1]); // logs 'b'
+console.log(arr[2]); // logs 'c'
+ We could use this approach to log out every variable in an array, but if our array has 1000 elements in it, then we can't really be writing 1000 console.log statements, one for each element!
+So, what we can do is pass a variable as the index. For example:
+let i = 2;
+console.log(arr[i]); // as i is 2, this statement
+                     // evaluates to console.log(arr[2]),
+                     // so it will log 'c'
+With that in mind, we can use a for loop which will create a variable called i, and increase it by one each time the loop executes.
+for (let i = 0; i < 1000; i++) {
+    console.log(arr[i]);
+}
+On the first iteration of the loop, the log statement will evaluate to: 
+console.log(arr[0]);
+then:
+console.log(arr[1]);
+then:
+console.log(arr[2]);
+All the way up to:
+console.log(arr[999]);
+So the for loop and the variable i are used to iterate through each element of the array, and access the value stored within.
+</pre>
+
+<h2>Break and continue </h2>
+
+<p>stops the iteration using the <pre>break</pre> keyword</p>
+
+<p>The break keyword stops the iteration no matter what. No matter at which step the iteration is, break keyword will stop the iteration and exit the loop:
+
+</p>
+ 
+ <p>note operators reference:</p>
+ <a href="https://www.w3schools.com/jsref/jsref_operators.asp"></a>
+
+<img src="images/break.png" alt="">
+
+<p>Although the iteration should have gone all the way up to 4, it ended when i was set to 3 because of the break statement.
+</p>
+
+<h2>break challenge</h2>
+<p>Although the iteration should have gone all the way up to 4, it ended when i was set to 3 because of the break statement.
+</p>
+
+<pre>// Write your loop here. Break it after printing 50 to the console:
+
+let i;
+
+for (i=0; i < 60; i++) {
+
+  if (i===51) {
+    break;
+  }
+  console.log(i)
+  }
+  </pre>
+
+
+<h2>continue</h2>
+
+<p>a javascript keyword which skips one iteration and moves to the next by using the continue keyword</p>
+<p>the continue keyworkd isnt going to stop the whole iteration and exit the loop iut will just skip one iteration and move to the next one</p>
+
+<h2>example </h2>
+
+<img src="images/continue.png" alt="">
+
+<p>Notice that there is no number 3 in the output. When variable i became 3, the iteration was skipped because of the continue keyword in the if statement and the code block did not run.</p>
+
+<h2>continue challenge</h2>
+<img src="images/continuechallenge.png" alt="">
+
+<p>what we take from this lesson is that we are only logging odd numbers so we need a way to iterate through the loop, we can check for an odd number by using the % symbol, modulus if i%2 (remainder) ==== is equal too 0 we know its 
+an even number so we then continue with the iteration, this will then check the next number, if we get any other number other than 0 we know its an odd, thich then activates the console.log(i)</p>
 
 
 
