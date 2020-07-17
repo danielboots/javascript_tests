@@ -74,7 +74,232 @@ In the below example we define a function that contains just two parameters – 
 </p>
 
 
+<h2>functions - challenge</h2>
 
+<img src="images/functionmotivate.png" alt="">
+
+<h2>Bonus challenge - TO COMPLETE</h2>
+
+
+
+<h2>calling a function</h2>
+<p>is the act of invoking a function</p>
+<p>it executes a function we use it by:</p>
+<p>Use the name of the function followed by parenthesis</p>
+
+
+<p>You might have already noticed that we needed to tell a function to run the code block. Functions are very helpful, but they sit and wait for us to call them before they do anything. If we do not call the function by name then nothing happens:</p>
+
+<img src="images/callfunction.png" alt="">
+
+<p>We called the function hello() at the fifth line, and now our console.log is displayed. Remember - a function will sit and wait for us to call it. If we don't call it, nothing will happen. Also, don't forget the parentheses () after the function name. Functions will not be triggered if you forget the parentheses.</p>
+
+<h2>return</h2>
+<p>is a keyword in javascript it returns a value from the function and stops further execution, we just add the return keyword before the expression you want to return</p>
+<p>A function is like a black box. We put data in and we don't need to be aware of what happens inside. So, how do we get the results of our function? You may have noticed that we used a return statement in our multiply function:</p>
+
+<h2>runnable example</h2>
+
+<img src="images/return.png" alt="">
+
+<p>if we remove the return from the function we get undefined, nothing works,,, we need the return, we also use it to preven a porential infinite loop see example </p>
+
+pWe declared a function named loop and called it at the 13th line. The for loop is the interesting part. It would be an infinite loop if we didn’t stop it with the return statement. Variable i is decreasing by 1 and since the condition i < 1 is never met, an infinite loop is created. We stopped the iteration when i became -3 because of the return statement. return exits the function immediately. -3 was returned as a result of the loop() function. Any code we put directly after a return statement is not executed.
+
+So, remember - we supply inputs to our black box by passing in arguments. We get the result by using the return statement, which also interrupts the running of the function.
+
+<img src="images/return1.png" alt="">
+<img src="images/return2.png" alt="">
+
+<h2>calling functions challenge</h2>
+
+<h2>calling multiples challenge</h2>
+
+<img src="images/multiple.png" alt="">
+
+
+<h2>Keywords</h2>
+<h2>let and var</h2>
+
+<p>are keywords used when declaring a variable</p>
+
+<p>use let or var followed by the name of the variable and assign a value to it.</p>
+
+<h2>the var keyword</h2>
+<p>Let's take a break from functions for a moment to discuss different ways we can declare variables. This might seem like an odd place to talk about this, but it's actually very relevant to our discussion of functions.
+
+You might have seen in other JavaScript code snippets that some authors declare variables using the var keyword, whereas we have used the let keyword up until now.
+
+The var keyword works in much the same way as the let keyword, but with some very subtle differences.</p>
+
+<p>One of the main differences is that var allows us to redeclare a variable, whereas the let keyword does not. Therefore we have a variable called myVariable that we created using the let keyword; then we won’t be able to redeclare myVariable again.
+
+A second difference is with regard to how the variables are scoped. Don't worry about what this means, we'll discuss it in detail in our next lesson.</p>
+
+
+
+<img src="images/varlet.png" alt="">
+<p>For the purposes of this course, we suggest using the let keyword to declare variables. It is more in line with current practice. You will see areas where we have used var to declare variables, and this is likely due to the individual developer's preference. As always, whichever way you choose to declare variables, it's important to be consistent.
+
+Although it's not strictly necessary to remember the subtle differences between var and let, it is good to know that they are not exactly the same.</p>
+
+<h2>let keyword challenge</h2>
+
+<p>let = lock cant change a variable var = multiple variables</p>
+
+<img src="images/let.png" alt="">
+
+<h2>const keyword</h2>
+
+<p>is a type of variable which value cant be changed </p>
+<p>Once a value has been assigned a const variable it can’t be changed. Ever. const is short for constant, after all. Let’s see an example:
+
+</p>
+
+<img src="image/const.png" alt="">
+<p>see it returns an error if we try to re declare the value</p>
+<p>We tried to assign a value to a const variable twice. If you press run, you will get an error: SyntaxError: Assignment to constant variable: language at 3:0 It means we can not assign a new value to a constant variable. Once you named your const variable, you can’t use that name for any more variables, be they, let or var variables. Let’s look at more errors:</p>
+
+<img src="images/constquote.png" alt="">
+
+<h2>block statements</h2>
+
+<p>is a block of code which defines a scope we use it by By enclosing a block of code inside of an if statement or a loop
+
+</p>
+<p>There is one more thing that needs to be said about the let and const keywords. Some programming languages will create a scope for a block of code. But JavaScript doesn’t:</p>
+
+
+
+<img src="images/scope.png" alt="">
+
+<h2>callbacks</h2>
+
+<p>is A function that gets passed to a function as an argument</p>
+<p>Instead of passing a value as we did so far, we are going to pass a function as an argument</p>
+
+<p>A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. Here is an example:</p>
+
+
+
+
+<img src="images/callback.png" alt="">
+
+<h2>callbacks 2 </h2>
+
+<img src="images/callback2.png" alt="">
+
+<p>Let's go through the code line by line as it is quite complicated.
+On the first line, we declare a function called ask in the same manner as previously. Nothing new here.
+This function takes three parameters, called question, good and bad. You can name these parameters anything.
+
+Within the body of the ask function, we have an if else code block. The confirm function takes one argument, the text shown in the dialogue box.</p>
+<p>On the second line, we are calling the confirm function with a question as an argument. The question argument is going to be passed from the question parameter in the ask function. The confirm function returns either true or false.
+
+If the result is true, the code block in the if statement will run, that is the good argument that will run a function.
+
+Otherwise, the code block in the else block will be executed, that is the bad argument that will run another function.
+
+Notice that good and bad arguments in parentheses have to have the same name as the good and bad calls in the code block. Try to change the names of those pairs and see what kind of errors you get.
+
+Moving on, we defined two more functions yes and no, and both of them use the alert method. Nothing new nor fancy here, right?
+
+On the 18th line of code, we called the ask function. We passed the “are you ok” string as a question argument for confirm in the second line of the if statement. When we call ask(“are you ok”) string “are you ok” is going to be an argument for the confirm function:
+confirm(“are you ok”)
+If the user presses “ok” in the dialogue, the confirm function returns true and the code block in the if statement is executed:
+good();
+The good argument got its value from the good parameter, and in this case, it is the yes function.
+
+If the user presses cancel in the dialogue box, confirm will return false and the code block in the else statement will be executed:
+bad();
+The bad argument got its value from the bad parameter, and in this case, it is the no function.
+
+We commented some code at the end of example to show you different outputs. Try uncommenting them one by one to help you understand the flow of the programme.</p>
+
+
+<h2>function scope</h2>
+
+<h3>javascript scope</h3>
+<p>The current context in which our JavaScript code runs</p>
+<p>It allows us to allow or prevent our variables and functions from being accessed from other scripts.</p>
+<p>By being careful about where global variables and functions are created.</p>
+
+<p>In programming, "scope" determines how and when you can access variables. You might also see it defined as something that determines the visibility of variables. It is the current context of our code. In JavaScript, we have two different types of scope:
+
+Global Scope
+Local Scope
+Before we look at these in detail, let's think for a moment about why this is important. Firstly, understanding the scope of your variables makes things more predictable. Secondly, in real life, we are usually concerned about our environment. We try and keep things clean and tidy, and we try to be responsible with how we discard our waste. We do this because it makes things nicer and safer for us. Additionally, we're not the only ones living in our environment, so it shows consideration for other people too.
+
+In programming, the global scope - or global namespace - is our environment. By being concerned with how we use the global namespace, it makes things easier for us. Also, we often use scripts written by other people. When we all take care of the global namespace, we show consideration for other developers and things run more smoothly for everyone.
+
+When we try to access variables outside of their scope, we get a referenceError like in the following example.</p>
+
+<img src="images/scope1.png" alt="">
+
+<p>The error tells us that the greeting variable is not defined, although we apparently defined it. It is not accessible. We'll see why that is in the following lessons.
+
+</p>
+
+
+<h2>global scope</h2>
+<p>is The outermost, or top, scope. Anything declared outside of a function lives in this scope</p>
+<p>It contains functions, objects and variables</p>
+<p> we use it By writing code that is not inside a function</p>
+
+<p>Whenever we declare a variable or create a function outside of another function, we are creating it in the Global Scope.
+
+Creating a variable in the global scope means that it is accessible - or visible - throughout our entire script and also from other scripts that we might have loaded. Additionally, variables declared in the global scope live for as long as your script or application is running. Most of the variables that we have created up to now have been in the global scope.
+
+Here is an example of a variable declared in the global scope:</p>
+
+<img src="images/globalanswer.png" alt="">
+
+
+<p>This probably looks quite normal to us; however, it is not best practice to declare variables globally like this. Global variables can be accessed, modified or even overwritten by any other script. We cannot trust that other scripts will not corrupt our global variables. Additionally, since these variables exist for the lifetime of our application, we could run into memory management issues - particularly if our variables are storing a large amount of data. For these reasons, it's best practice to avoid creating variables in the global scope. Creating global variables as we have done in our example is also known as "polluting the global scope".
+
+While it's ok to declare variables like this in small, standalone scripts, the take-away point from this lesson is: avoid creating global variables where possible. In our next lesson, we'll look at local scope and see how to limit variable visibility.</p>
+
+
+
+<h2>local scope</h2>
+<p>is scope inside of functions, allowing us to liumit our variable visibility</p>
+<p> we achieve this by defininig and using variables inside of functions</p>
+
+
+<h2>local scope:</h2>
+<p>If variables created in the global scope are accessible and visible to all scripts, then it follows that variables created in local scope have more limited visibility. Variables defined within a JavaScript function are local to that function. They are not visible or accessible from outside the function. Whereas global variables live for the lifetime of our application, local variables exist while the function is executing.
+
+The sample code below shows an example of local scope. The variable named theAnswer is only visible inside the displayAnswer() function. It is not visible outside. Try uncommenting the last console.log(theAnswer); statement and run the code again. What happens? Is that what you expected?</p>
+
+<img src="images/local.png" alt="">
+
+<p>If you expected an error, then you were correct. Our theAnswer variable is local to the displayAnswer() function. Try moving the variable declaration on line 6 to line 2, so it is now declared in the global scope. What happens when you run it now?
+
+In summary, it is good practice to avoid polluting the global scope wherever possible. Try to keep variables inside functions, and pass around values using the the return from your function rather than creating a global variable. This does mean that you need a bit more planning when writing your code. It can be tempting to create lots of global variables to store your values, but this is a bit like throwing your litter on the ground instead of putting it in a bin; it's easier for you, but it makes the environment more dangerous and less predictable for everyone.
+
+We've nearly finished our discussion about scope, in the next lesson we'll talk about one final thing to remember.</p>
+
+
+<h2>let var scope</h2>
+
+<p>The let and var keywords operate differently with regard to scope.
+Declares variables
+By using let or var to declare variables.
+</p>
+
+
+<h2>let and var</h2>
+<p>In a previous lesson, we showed a difference between the let and var keywords. You might remember that let will not allow you to re-declare a variable, whereas var will. There are more differences between these two ways of declaring variables, and they are mostly concerned with scope.
+
+The main difference is that var is scoped to the enclosing function (and any sub-blocks), whereas let is scoped to the enclosing block (and any sub-blocks). What??? Let's look at an example:</p>
+
+<img src="images/letvarscope.png" alt="">
+
+<p>So, what is happening here? In our first function, we declare our variable using var. This is scoped to it's enclosing function - varScope(), so when we assign the new value to theAnswer inside our if block, we are changing the value of the original variable.
+
+In our second example, we declare using let. This is scoped to the enclosing block, so when we assign a value to theAnswer inside our if block, we are actually creating a new variable. The original one remains unchanged. If we had omitted the let keyword on line 13, then the original variable would have been modified. It is the addition of the let keyword that creates a new variable.
+
+We could say, then, that let is more narrowly scoped than var. Largely, the two keywords operate the same, but we suggest being consistent in whether you choose to declare variables with var or let. The let keyword is the more modern way of declaring variables, so we recommend sticking with that.</p>
 
 
 
